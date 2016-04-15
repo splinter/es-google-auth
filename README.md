@@ -6,7 +6,8 @@
 5. You will be prompted for your google login details
 
 **Important**
-You will need to register an app using the following guide [2] and then replace the clientID variable in oauth-sample/pages/other-login.jag
+1.You will need to register an app using the following guide [2] and then replace the clientID variable in oauth-sample/pages/other-login.jag
+2.Ensure that you configure the redirect_uri to https://localhost:9443/oauth2
 
 #TODO
 1. Implement user provisioning and tenant loading logic
