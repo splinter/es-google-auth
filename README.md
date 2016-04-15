@@ -8,3 +8,5 @@
 #TODO
 1. Implement user provisioning and tenant loading logic
 
+#References
+1 https://developers.google.com/identity/protocols/OpenIDConnect#server-flow
