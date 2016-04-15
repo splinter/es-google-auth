@@ -1,0 +1,5 @@
+<%
+ var log = new Log();
+ log.info(request.getAllParameters('UTF-8'));
+ //TODO: User provisioning etc
+%>

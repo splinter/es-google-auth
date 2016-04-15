@@ -1,0 +1,34 @@
+<%
+    var log = new Log();
+    var clientID = 'REPLACE WITH CLIENT ID';
+    var responseType = 'code';
+    var redirectURI = 'https://localhost:9443/publisher/pages/oauth2';
+    var state = '8822aau922p023330303399d9';
+    var loginHint='some hint';
+    var scope = 'openid email';
+    var authURL = 'https://accounts.google.com/o/oauth2/auth?';
+    log.info('Client id '+clientID);
+    var headers = {
+                'client_id':clientID,
+                'response_type':responseType,
+                'scope':scope,
+                'redirect_uri':redirectURI,
+                'state':state,
+                'login_hint':loginHint
+              };
+         var q='';
+         var index =0;
+
+        for(var key in headers){
+          q+=key+'='+headers[key];
+          if(Object.keys(headers).length > (index++)){
+            q+='&';
+          }
+        }
+        var requestURL = authURL + encodeURI(q); 
+        log.info('request URL : '+requestURL);
+    log.info('Finished making the request');
+    log.info('q:' +q);
+    var res =get(requestURL);
+    print(res.data);
+%>
